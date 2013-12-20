@@ -5,6 +5,10 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="ise.pfgfieldpermission">
 
+  <!-- Here the . subfolders must be registered -->
+  <include package=".content" />
+  <include package=".browser" />
+
   <five:registerPackage package="." initialize=".initialize" />
 
   <includeDependencies package="." />
