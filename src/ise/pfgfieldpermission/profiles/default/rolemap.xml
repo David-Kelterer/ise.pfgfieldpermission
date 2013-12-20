@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<rolemap>
+    <permissions>
+        <permission name="ise.pfgfieldpermission: Add FGStringFieldPermissions" acquire="False">
+            <role name="Manager" />
+            <role name="Owner" />
+            <role name="Contributor" />
+            <role name="Editor" />
+         </permission>
+    </permissions>
+</rolemap>  
+            
+        
+

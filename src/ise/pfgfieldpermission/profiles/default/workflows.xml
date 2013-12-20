@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object name="portal_workflow" meta_type="Plone Workflow Tool">
+ <bindings>
+    <!--Each type listet here becomes no workflow -->
+   <type type_id="FormStringFieldPermission"/>
+ </bindings>
+</object>

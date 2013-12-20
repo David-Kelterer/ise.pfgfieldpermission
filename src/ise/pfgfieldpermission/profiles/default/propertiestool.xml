@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+In case of Plone Bug
+
+https://dev.plone.org/ticket/10639
+
+this statements will not be interpreted by the navigation portlet in site root.
+
+-->
+    <object name="portal_properties" meta_type="Plone Properties Tool">
+        <object name="navtree_properties" meta_type="Plone Property Sheet">
+            <property name="metaTypesNotToList" type="lines" purge="false">
+                <element value="FormStringFieldPermission"/>
+            </property>
+        </object>
+    </object>

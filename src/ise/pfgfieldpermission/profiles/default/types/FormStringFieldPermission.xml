@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<object name="FormStringFieldPermission"
+    meta_type="Factory-based Type Information with dynamic views"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="ise.pfgfieldpermission">
+
+    <property name="title" i18n:translate="Role-base String Field">Role-base String Field</property>
+    <property name="description" i18n:translate="A string entry field with role-based permissions">A string entry field with role-based permissions</property>
+    <property name="content_icon">StringField.gif</property>
+    <property name="content_meta_type">FormStringFieldPermission</property>
+    <property name="product">ise.pfgfieldpermission</property>
+    <property name="factory">addFGStringFieldPermissions</property>
+    <property name="immediate_view">atct_edit</property>
+    <property name="global_allow">False</property>
+    <property name="filter_content_types">False</property>
+    <property name="allowed_content_types"/>
+    <property name="allow_discussion">False</property>
+    <property name="default_view">view</property>
+    <property name="view_methods">
+        <element value="view"/>
+    </property>
+
+    <!--Here the action/edit bar is going to be defined -->
+    <alias from="(Default)" to="(dynamic view)"/>
+    <alias from="edit" to="atct_edit"/>
+    <alias from="sharing" to="@@sharing"/>
+    <alias from="view" to="(selected layout)"/>
+
+    <action title="View" action_id="view" category="object" condition_expr=""
+        url_expr="string:${object_url}/view" visible="True">
+        <permission value="View"/>
+    </action>
+    <action title="Edit" action_id="edit" category="object"
+        condition_expr="not:object/@@plone_lock_info/is_locked_for_current_user"
+        url_expr="string:${object_url}/edit" visible="True">
+        <permission value="Modify portal content"/>
+    </action>
+
+</object>

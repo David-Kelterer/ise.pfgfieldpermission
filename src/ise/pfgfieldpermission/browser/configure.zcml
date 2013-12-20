@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="ise.pfgfieldpermission">
+
+    <browser:page
+        for="..interfaces.IStringFieldPermission"
+        name="view"
+        class=".fields.FGStringFieldPermissionsView"
+        permission="zope2.View"
+    />
+
+</configure>
+    
